@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(41, 41, 39);
+}
+
+.customh1 {
+    text-align: center;
+    color: rgb(114, 114, 201);
+}
+
+.customMargin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.textLorem {
+    color: aliceblue;
+}
