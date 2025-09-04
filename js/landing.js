@@ -13,3 +13,5 @@ function changeVariable() {
     tav.innerHTML = x;
 }
 
+let operadoresMath = (5+12-6)*(8/(2**3));
+
