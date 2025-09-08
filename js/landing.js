@@ -22,22 +22,36 @@ const PRECIO = 20;
 let estatura = 0;
 
 function evaluarEdad() {
-    if (edadPersona < 18) {
+    edadPersona = parseInt(prompt('Por favor, indicar tu edad'));
+    if (edadPersona >= 18) {
         alert('La persona es mayor de edad');
+        evluarRequisitosMinimos();
     } else {
         alert('La persona no es mayor de edad');
+        return;
     }
 }
 
 function evluarRequisitosMinimos() {
-    if (edadPersona >= 16 && edadPersona <= 40 && PESO >= 20) {
-        alert('El candidato cumle con los requisitos y puede ser admitido');
+    peso = parseInt(prompt('Indique su peso'))
+    if (edadPersona >= 16 && edadPersona <= 40 && peso >= 20) {
+        alert('El candidato cumple con los requisitos y puede ser admitido');
+        calcularCostoInscripcion();
+        evaluarCategoria();
     } else {
         alert('El candidato no cumple con los requisitos minimos');
+        return;
     }
+    alert('Tu proceso de seleccion ha finalizado con exito')
 }
 
 function calcularCostoInscripcion() {
+    let respuestaNacionalidad = prompt('Si eres nacional responde si, de lo contrario responde no')
+    if (respuestaNacionalidad === 'si') {
+        nacional = true;
+    } else {
+        nacional = false;
+    }
     if ((edadPersona >= 20 && edadPersona <= 30) || nacional === true) {
         let precioConDescuento = 20 - (20 * 10 / 100);
         alert('El precio a pagar por ser nacional o estar en el rango de edad de 20 a 30 es: ' + precioConDescuento);
@@ -47,7 +61,10 @@ function calcularCostoInscripcion() {
 }
 
 function evaluarCategoria() {
+    estatura = parseFloat (prompt('Por favor ingrese su estatura'));
     if (estatura != 1.68) {
-        alert( 'Lo sentimos para practicar basketball solo se admiten personas con una estatura igual a 1.68' );
+        alert('Lo sentimos para practicar basketball solo se admiten personas con una estatura igual a 1.68');
+    }else{
+        alert('Felicidades has sido admitido para ser Basketbolista')
     }
 }
