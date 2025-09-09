@@ -109,3 +109,13 @@ function leerValores(simbolo) {
         tav.className += "alertaValorNegativo";
     }
 }
+function evaluar (){
+    let iterar = true;
+    while (iterar){
+        var respuesta = prompt ('Quiere continuar iterando, responde si o no');
+        if (respuesta != 'si'){
+            iterar = false;
+        }
+    }
+    alert ('He salido del ciclo');
+}
