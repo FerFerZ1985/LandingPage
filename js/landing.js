@@ -109,13 +109,22 @@ function leerValores(simbolo) {
         tav.className += "alertaValorNegativo";
     }
 }
-function evaluar (){
+function evaluar() {
     let iterar = true;
-    while (iterar){
-        var respuesta = prompt ('Quiere continuar iterando, responde si o no');
-        if (respuesta != 'si'){
+    while (iterar) {
+        var respuesta = prompt('Quiere continuar iterando, responde si o no');
+        if (respuesta != 'si') {
             iterar = false;
         }
     }
-    alert ('He salido del ciclo');
+    alert('He salido del ciclo');
+}
+
+
+//let persona = [20, 'Juan Perez', true, 1, 68];
+
+function evaluarCiclofor() {
+    for (let contador = 0; contador < 5; contador++) {
+        akert('El valor que tiene guardado person en la posicion' +contador+' es: '+persona[contador]);
+    }
 }
