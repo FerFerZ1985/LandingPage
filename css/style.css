@@ -17,3 +17,9 @@ body {
 .textLorem {
     color: aliceblue;
 }
+
+.alertaValorNegativo {
+    background-color: goldenrod;
+    color: blue;
+    font-size: 30px;
+}

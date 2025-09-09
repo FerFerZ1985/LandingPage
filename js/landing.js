@@ -61,26 +61,51 @@ function calcularCostoInscripcion() {
 }
 
 function evaluarCategoria() {
-    estatura = parseFloat (prompt('Por favor ingrese su estatura'));
+    estatura = parseFloat(prompt('Por favor ingrese su estatura'));
     if (estatura != 1.68) {
         alert('Lo sentimos para practicar basketball solo se admiten personas con una estatura igual a 1.68');
-    }else{
+    } else {
         alert('Felicidades has sido admitido para ser Basketbolista')
     }
 }
 
 
-function sumar (numero1, numero2){
+function sumar(numero1, numero2) {
     let resultado = numero1 + numero2;
     return resultado;
 }
 
-function multiplicar (x,y) {
+function multiplicar(x, y) {
     let z = x * y;
     return z;
 }
 
-function division (){
+function division(a, b) {
     var c = a / b;
     return c;
+}
+
+
+function leerValores(simbolo) {
+    var a = 0
+    let x = parseFloat(prompt('Por favor ingrese el numero: 1'));
+    let y = parseFloat(prompt('Por favor ingrese el numero: 2'));
+    if (simbolo != '' && (simbolo === '+' || simbolo === '*' || simbolo == "/")) {
+        if (simbolo === '+') {
+            a = sumar(x, y);
+        }
+        if (simbolo === '*') {
+            a = multiplicar(x, y);
+        }
+        if (simbolo === '/') {
+            a = division(x, y);
+        }
+    } else {
+        alert('Lo siento no podemos continuar porque el simbolo no puede estar vacio');
+        return;
+    }
+    tav.innerHTML = a;
+    if (a <= 0) {
+        tav.className += "alertaValorNegativo";
+    }
 }
