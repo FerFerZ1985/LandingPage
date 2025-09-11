@@ -87,6 +87,7 @@ function division(a, b) {
 
 
 function leerValores(simbolo) {
+    try {
     var a = 0
     let x = parseFloat(prompt('Por favor ingrese el numero: 1'));
     let y = parseFloat(prompt('Por favor ingrese el numero: 2'));
@@ -104,9 +105,14 @@ function leerValores(simbolo) {
         alert('Lo siento no podemos continuar porque el simbolo no puede estar vacio');
         return;
     }
+    isNaN(a)
+        throw 'Solo procesar numeros';
     tav.innerHTML = a;
     if (a <= 0) {
         tav.className += "alertaValorNegativo";
+    }
+    }catch (err){
+        alert ('Lo siento, se presento un error: ' +err);
     }
 }
 function evaluar() {
@@ -123,8 +129,9 @@ function evaluar() {
 
 //let persona = [20, 'Juan Perez', true, 1, 68];
 
-function evaluarCiclofor() {
-    for (let contador = 0; contador < 5; contador++) {
-        akert('El valor que tiene guardado person en la posicion' +contador+' es: '+persona[contador]);
+function evaluarCiclofor(){
+    for (let contador = 0; contador < persona.length; contador ++) {
+        alert('El valor que tiene guardado persona en la posicion ' + contador + ' es: ' + persona[contador]);
     }
 }
+
